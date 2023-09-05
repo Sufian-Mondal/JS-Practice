@@ -19,11 +19,43 @@
 // document.write("Total number of wins = " + numberOfWins + "<br>");
 // document.write("Total number of Losts = " + numberOfLosts);
 
-var myHeading = document.getElementById("heading1");
-myHeading.innerHTML = "Hello, I am sufian";
+// var myHeading = document.getElementById("heading1");
+// myHeading.innerHTML = "Hello, I am sufian";
 
-var myHeading2 = document.getElementById("heading2");
-myHeading2.innerHTML = "Goodbye goodbye";
+// var myHeading2 = document.getElementById("heading2");
+// myHeading2.innerHTML = "Goodbye goodbye";
 
-var myPera = document.getElementById("pera1");
-myPera.innerHTML = "Today is thursday";
+// var myPera = document.getElementById("pera1");
+// myPera.innerHTML = "Today is thursday";
+
+var photos = [
+  "images/sufian-1.png",
+  "images/sufian-2.png",
+  "images/sufian-3.png",
+];
+
+var imgTag = document.querySelector("img");
+
+var count = 0;
+
+function next() {
+  count++;
+
+  if (count >= photos.length) {
+    count = 0;
+    imgTag.src = photos[count];
+  } else {
+    imgTag.src = photos[count];
+  }
+}
+
+function prev() {
+  count--;
+
+  if (count < 0) {
+    count = photos.length - 1;
+    imgTag.src = photos[count];
+  } else {
+    imgTag.src = photos[count];
+  }
+}
