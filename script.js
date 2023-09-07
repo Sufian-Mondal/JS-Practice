@@ -60,12 +60,26 @@
 //   }
 // }
 
-var myVar = document.querySelector("#paraId");
+//changing style dynamically
 
-function addStyle() {
-  myVar.classList.add("para-style");
-}
+// var myVar = document.querySelector("#paraId");
 
-function removeStyle() {
-  myVar.classList.remove("para-style");
-}
+// function addStyle() {
+//   myVar.classList.add("para-style");
+// }
+
+// function removeStyle() {
+//   myVar.classList.remove("para-style");
+// }
+
+//addEventListner// announimous function
+
+var myStyle = document.querySelector("h1");
+
+myStyle.addEventListener("mouseover", function () {
+  myStyle.classList.add("country-style");
+});
+
+myStyle.addEventListener("mouseout", function () {
+  myStyle.classList.remove("country-style");
+});
