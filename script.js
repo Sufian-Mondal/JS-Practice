@@ -74,12 +74,25 @@
 
 //addEventListner// announimous function
 
-var myStyle = document.querySelector("h1");
+// var myStyle = document.querySelector("h1");
 
-myStyle.addEventListener("mouseover", function () {
-  myStyle.classList.add("country-style");
-});
+// myStyle.addEventListener("mouseover", function () {
+//   myStyle.classList.add("country-style");
+// });
 
-myStyle.addEventListener("mouseout", function () {
-  myStyle.classList.remove("country-style");
-});
+// myStyle.addEventListener("mouseout", function () {
+//   myStyle.classList.remove("country-style");
+// });
+
+//Even listner with multiple elements
+
+var len = document.querySelectorAll(".myButton").length;
+
+for (var i = 0; i < len; i++) {
+  document
+    .querySelectorAll(".myButton")
+    [i].addEventListener("click", function () {
+      var text = this.innerHTML;
+      document.querySelector("h1").innerHTML = text + " is clicked";
+    });
+}
