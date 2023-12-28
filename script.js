@@ -86,13 +86,21 @@
 
 //Even listner with multiple elements
 
-var len = document.querySelectorAll(".myButton").length;
+// var len = document.querySelectorAll(".myButton").length;
 
-for (var i = 0; i < len; i++) {
-  document
-    .querySelectorAll(".myButton")
-    [i].addEventListener("click", function () {
-      var text = this.innerHTML;
-      document.querySelector("h1").innerHTML = text + " is clicked";
-    });
+// for (var i = 0; i < len; i++) {
+//   document
+//     .querySelectorAll(".myButton")
+//     [i].addEventListener("click", function () {
+//       var text = this.innerHTML;
+//       document.querySelector("h1").innerHTML = text + " is clicked";
+//     });
+// }
+var numbersArray = [2, 200];
+for (var i = 2; i < 201; i++) {
+  console.log((sum = " "));
 }
+
+// for (var m = 0; m <= numbersArray.length + 1; m++) {
+//   console.log(numbersArray[m]);
+// }
